@@ -16,7 +16,6 @@
 
 #include <ch.h>
 #include <modules/uavcan_debug/uavcan_debug.h>
-#include <modules/lpwork_thread/lpwork_thread.h>
 #include <modules/param/param.h>
 #include <common/helpers.h>
 #include <string.h>
@@ -25,7 +24,7 @@
 int main(void) {
     chThdSleep(S2ST(3));
     struct invensense_instance_s invensense;
-    invensense_init(&invensense, 3, BOARD_PAL_LINE_SPI3_ICM_CS, INVENSENSE_IMU_TYPE_ICM20602);
+    invensense_init(&invensense, 3, BOARD_PAL_LINE_SPI3_ICM_CS, INVENSENSE_IMU_TYPE_ICM20602, ACCEL_FS_2g, GYRO_FS_250dps);
 
     chThdSleep(TIME_INFINITE);
 

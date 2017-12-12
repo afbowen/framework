@@ -13,9 +13,9 @@ pubsub \
 flash \
 param \
 worker_thread \
-lpwork_thread \
 can \
-can_auto_init \
+can_driver_stm32 \
+can_autobaud \
 uavcan \
 uavcan_nodestatus_publisher \
 uavcan_getnodeinfo_server \
